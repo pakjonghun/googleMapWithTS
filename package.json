@@ -18,11 +18,18 @@
     "url": "https://github.com/pakjonghun/googleMapWithTS/issues"
   },
   "homepage": "https://github.com/pakjonghun/googleMapWithTS#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@types/lodash": "^4.14.178",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.2",
+    "es6-shim": "^0.35.6",
+    "lodash": "^4.17.21",
+    "reflect-metadata": "^0.1.13"
+  },
   "devDependencies": {
     "ts-loader": "^9.2.6",
     "webpack": "^5.65.0",
-    "webpack-dev-server": "^4.7.1",
-    "webpack-cli": "^4.9.1"
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.1"
   }
 }
