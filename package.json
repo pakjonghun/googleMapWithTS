@@ -19,9 +19,14 @@
   },
   "homepage": "https://github.com/pakjonghun/googleMapWithTS#readme",
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.12.12",
+    "@types/axios": "^0.14.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/googlemaps": "^3.43.3",
     "@types/lodash": "^4.14.178",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
+    "dotenv": "^10.0.0",
     "es6-shim": "^0.35.6",
     "lodash": "^4.17.21",
     "reflect-metadata": "^0.1.13"

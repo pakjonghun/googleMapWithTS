@@ -1,4 +1,8 @@
+const webpack = require("webpack");
+const dotenv = require("dotenv");
 const path = require("path");
+
+dotenv.config();
 
 module.exports = {
   entry: "./src/app.ts",
@@ -25,4 +29,10 @@ module.exports = {
     },
     port: 9000,
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env.KEY": JSON.stringify(process.env.KEY),
+    }),
+    new webpack.EnvironmentPlugin(["KEY"]),
+  ],
 };
