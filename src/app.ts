@@ -4,7 +4,6 @@ import { Loader } from "@googlemaps/js-api-loader";
 const form = document.querySelector("form")! as HTMLFormElement;
 const input = document.querySelector("input")! as HTMLInputElement;
 const key = process.env.KEY;
-console.log(key);
 
 const loader = new Loader({
   apiKey: key,
@@ -12,6 +11,8 @@ const loader = new Loader({
 });
 
 function getLocation(lat: number, lng: number) {
+  console.log(lat, lng);
+
   const myLatlng = new google.maps.LatLng(lat, lng);
 
   const mapOptions = {
@@ -68,5 +69,5 @@ async function getApi(adress: string) {
   if (res1.data.status !== "OK") throw new Error("wrong location");
   const data = res1.data.results[0]?.geometry.location;
 
-  getLocation(data.lat, data.lng);
+  await getLocation(data.lat, data.lng);
 }
